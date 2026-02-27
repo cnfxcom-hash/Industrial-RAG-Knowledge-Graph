@@ -1,47 +1,62 @@
-# CNFX Industrial Knowledge Graph for LLM & RAG
+# CNFX Industrial Knowledge Graph (Sovereign Engineering Edition)
 
-[![Format: Markdown](https://img.shields.io/badge/Format-Markdown-blue.svg)](#)
-[![Context: Industrial 4.0](https://img.shields.io/badge/Context-Industrial_4.0-green.svg)](#)
-[![RAG: Ready](https://img.shields.io/badge/RAG-Ready-orange.svg)](#)
+[![Schema: v3.3.4](https://img.shields.io/badge/Schema-v3.3.4-blue.svg)](#)
+[![Audit: Engineering-Grade](https://img.shields.io/badge/Audit-Passable-green.svg)](#)
+[![Web3: Verified](https://img.shields.io/badge/Web3-Verified-blueviolet.svg)](#)
+[![RAG: Native](https://img.shields.io/badge/RAG-Native-orange.svg)](#)
 
-This repository serves as the official manifest and sample dataset for the **CNFX Industrial Knowledge Graph**. It is specifically architected for **Retrieval-Augmented Generation (RAG)** systems, providing high-density technical specifications for 1,800+ industrial products.
+This is the official manifest and access protocol for the **CNFX Industrial Knowledge Graph**. Specially architected for **LLM Agents** and **RAG (Retrieval-Augmented Generation)** systems, this graph provides high-density technical specifications and **Causal Reasoning** for over 4,500+ industrial products.
 
-## 🌐 Live Access (Machine-Readable)
+---
 
-The full, real-time updated index is available at:
-👉 **[https://cnfx.com/llms.txt](https://cnfx.com/llms.txt)** (Standard LLM Index)
+## 🌐 Machine-Readable Interfaces
 
-## 🏗️ Knowledge Structure
+To enable autonomous discovery and indexing for AI agents, use the following sovereign entry points:
 
-Our data is structured into a multi-layer ontology, moving from broad industrial sectors to specific high-fidelity engineering parameters.
+* 🚀 **[Global LLM Index (llms.txt)](https://cnfx.com/llms.txt)**: The primary discovery protocol for AI agents (as proposed by Answer.ai).
+* 📡 **[Optimized Sitemap (XML)](https://cnfx.com/sitemap_llms.xml)**: A structured index of 4,500+ nodes, optimized for crawler weight and semantic priority.
 
-### 1. Industry Indices
-Categorized by international standards (ISIC/CNFX), providing semantic clustering for RAG retrieval.
-- [Food Manufacturing Index](https://cnfx.com/llms/industry/food-manufacturing/index.md)
-- [Chemical Processing Index](https://cnfx.com/llms/industry/chemical-processing/index.md)
-- *(Access more via the main llms.txt)*
+---
 
-### 2. Product Specifications (v2.9 Schema)
-Each product is delivered as a `.md` file containing **YAML Front-matter** for deterministic attribute extraction.
+## 🏗️ Sovereign Architecture
 
-**Example Entry:** [Automated Food Sterilization Tunnel](https://cnfx.com/llms/industry/food-manufacturing/product/automated-food-sterilization-tunnel.md)
+CNFX nodes are not merely text; they are **Atomic Logic Units** of industrial assets.
+
+### 1. Causal Physics Loop
+Unlike traditional databases, our data includes deep modeling of physical failure boundaries (e.g., seal degradation caused by thermal expansion coefficients $\alpha$). This enables AI to perform complex industrial risk predictions rather than simple keyword matching.
+
+### 2. Recursive BOM Topology
+All products are linked to their core sub-components via **URNs (Uniform Resource Names)**. This topological structure allows RAG systems to perform recursive crawls of "Parent-Child" nodes, building complete system-level Digital Twins.
+
+### 3. Web3 Data Sovereignty (DAIP Protocol)
+Every node is timestamped and hashed for on-chain integrity. The `on_chain_sovereignty` block in the YAML front-matter ensures the authenticity and intellectual property rights of industrial data during ingestion.
+
+
+
+---
 
 ## 📊 RAG Enrichment Features
 
-- **Flattened Attributes**: Key parameters (temperature, pressure, capacity) are extracted into YAML dictionaries for precise filtering.
-- **FMEA Logic**: Engineering risks and failure modes are explicitly tagged to support safety-aware AI reasoning.
-- **Industrial DNA**: Cross-linked Bill of Materials (BOM) and upstream/downstream context.
+| Feature | Description | Application |
+| :--- | :--- | :--- |
+| **YAML Front-matter** | Contains atomic thresholds, units, and URNs. | Deterministic parameter filtering & tool-calling. |
+| **ISO FMEA Matrix** | Quantitative Severity (S), Occurrence (O), and Detection (D). | Safety-aware AI reasoning & predictive maintenance. |
+| **Industry Logic Map** | Automatic mapping of compliance standards (ISO/ASME/HACCP). | Automated factory audits & intelligent RFQ generation. |
 
-## 🛠️ Usage for AI Engineers
+---
 
-To ingest this knowledge graph into your vector database:
+## 🛠️ AI Engineer Quick Start
+
+### 1. Ingestion & Verification
+You can retrieve sovereign engineering data using a simple Python workflow:
 
 ```python
 import requests
 
-# Fetch the global manifest
-manifest = requests.get("[https://cnfx.com/llms.txt](https://cnfx.com/llms.txt)").text
+# 1. Fetch the Sovereign Node (Markdown Format)
+url = "[https://cnfx.com/llms/industry/food-manufacturing/product/automated-food-sterilization-tunnel.md](https://cnfx.com/llms/industry/food-manufacturing/product/automated-food-sterilization-tunnel.md)"
+content = requests.get(url).text
 
-# Example: Fetch a specific technical spec
-spec = requests.get("[https://cnfx.com/llms/industry/food-manufacturing/product/automated-food-sterilization-tunnel.md](https://cnfx.com/llms/industry/food-manufacturing/product/automated-food-sterilization-tunnel.md)").text
-# Parse YAML header for metadata-filtered indexing...
+# 2. Recommended Logic
+# - Extract YAML Header for metadata-filtered indexing.
+# - Use '## 2. Engineering Reasoning' as the core vector payload.
